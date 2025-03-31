@@ -13,6 +13,7 @@
     margin-top: 40px;
 }
 
+/* 确保在不同屏幕尺寸下保持9宫格布局 */
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
@@ -31,10 +32,39 @@
     }
 }
 
+/* 在手机端（小于768px）保持9宫格布局 */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
 /* 调整图片宽度 */
 .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
     display: block;
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+/* 使用 CSS Grid 确保9宫格布局 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    gap: 10px; /* 列间距 */
+}
+
+/* 在手机端保持9宫格布局 */
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 保持3列 */
+    }
+}
+
+/* 确保图片保持宽高比 */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* 保持图片比例 */
 }
