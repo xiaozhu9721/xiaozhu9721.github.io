@@ -1,0 +1,40 @@
+/* 调整列间距 */
+.col-xs-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.col-xs-4 a {
+    margin-bottom: 10px;
+}
+
+/* 调整容器宽度 */
+.container {
+    margin-top: 40px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* 调整图片宽度 */
+.carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
